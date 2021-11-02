@@ -10,11 +10,11 @@ PKG_SOURCE := dpdk-$(PKG_VERSION).tar.xz
 PKG_SOURCE_URL := http://static.dpdk.org/rel
 PKG_MD5SUM := a78bba290b11d9717d1272cc6bfaf7c3
 
-PKG_BUILD_DEPENDS:= meson/host ninja/host
+PKG_BUILD_DEPENDS:= 
 include $(INCLUDE_DIR)/package.mk
 include $(INCLUDE_DIR)/host-build.mk
-include $(TOPDIR)/feeds/packages/devel/meson/meson.mk
-include $(TOPDIR)/feeds/packages/devel/ninja/ninja.mk
+#include $(TOPDIR)/feeds/packages/devel/meson/meson.mk
+#include $(TOPDIR)/feeds/packages/devel/ninja/ninja.mk
 
 TARGET_CFLAGS += -D_GNU_SOURCE -Wno-unused-result -Wno-format-nonliteral
 

@@ -74,7 +74,6 @@ endef
 
 ifeq ($(CONFIG_RCLONE_COMPRESS_GOPROXY),y)
 	export GO111MODULE=on
-	export GOPROXY=https://goproxy.baidu.com
 endif
 
 define Package/rclone-config/conffiles
