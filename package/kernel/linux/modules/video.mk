@@ -227,8 +227,9 @@ define KernelPackage/multimedia-input
 	CONFIG_LIRC=y \
 	CONFIG_RC_DECODERS=y \
 	CONFIG_RC_DEVICES=y
-  FILES:=$(LINUX_DIR)/drivers/media/rc/rc-core.ko
-  AUTOLOAD:=$(call AutoProbe,rc-core)
+  FILES:=$(LINUX_DIR)/drivers/media/rc/rc-core.ko\
+  $(LINUX_DIR)/drivers/input/input-core.ko
+  AUTOLOAD:=$(call AutoProbe,rc-core,input-core)
 endef
 
 define KernelPackage/multimedia-input/description
